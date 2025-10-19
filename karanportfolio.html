@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karan Narang | Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #BCB8B1, #BCB8B1);
+      color: rgba(70,63,58,1.9);
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      padding: 80px 20px;
+    }
+    header h1 {
+      margin-left: 35px;
+      margin-bottom: 10px;
+      position: sticky;
+      font-size: 2.8em;
+      color: #F4F3EE;
+    }
+    nav {
+      border-color:#463F3A;
+      background-color:rgba(138,129,124,0.6);
+      margin-left:20px;
+      width:90%;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 15px;
+      background: ;
+      backdrop-filter: blur(1px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-radius:25px;
+      
+    }
+    nav a {
+      color:#F4F3EE;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #fff;
+      transform: scale(1.1);
+    }
+    section {
+      padding: 80px 20px;
+      max-width: 900px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s ease;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color:#F4F3EE;
+      font-size: 2rem;
+    }
+    .card {
+      background: rgba(70,63,58,0.01);
+      padding: 25px;
+      border-radius: 15px;
+      margin-bottom: 55px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+      transition: 0.3s;
+        backdrop-filter: blur(2px);
+    }
+    .card:hover {
+      color:black;
+      background-color:white;
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+      transition-duration:0.5s;
+    }
+    button {
+      background:rgb(white);
+      border: none;
+      padding: 10px 20px;
+      color: #000;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: white;
+      transform: scale(1.05);
+    }
+
+    }
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #111;
+      color: #888;
+    }
+
+    /* Snake Game Styles */
+    #gameContainer {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+      position: relative;
+    }
+    canvas {
+      background: #000;
+      border: 2px solid #F4F3EE;
+      border-radius: 10px;
+    }
+    #score {
+      margin: 10px;
+      font-size: 1.2em;
+      color: #F4F3EE;
+    }
+  #card1
+  {
+    margin-bottom: -170px;
+  }
+  #card2
+  {
+    margin-bottom: -150px;
+  }
+#card3
+  {
+    margin-top: -60px;
+    margin-bottom:-170px;
+  }
+  
+    }
+  </style>
+</head>
+<body>
+<div>
+<img src="logo.jpg">
+</div>
+  <header>
+    <h1>Hello, I'm Karan 👋</h1>
+    <p>Front-End Developer | Web Designer | Creative Thinker</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#My education">My education</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>I create modern, animated, and responsive websites using HTML, CSS, and JavaScript. I love making digital experiences that feel smooth and fun.</p>
+    </div>
+  </section>
+  
+  <section id="My education">
+    <h2>My education</h2>
+    <div class="card" id="card1">
+    <p>
+      •10th from hbse board 
+    </p>
+    </div>
+  </section>
+  <section id="Myeducation">
+  <div class="card" id="card2">
+    <p>
+      •12th from hbse board 
+    </p>
+    </div>
+    </section>
+    <section id="My education">
+  <div class="card" id="card3">
+    <p>
+      •Diploma in ccwdm from hartron skill centre
+    </p>
+    </div>
+    </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="card">
+      <h3>🌐 Portfolio Website</h3>
+      <p>A personal portfolio with smooth animations and polished design.</p>
+      <button onclick="alert('This is your current portfolio!')">View Details</button>
+    </div>
+
+
+    <div class="card" id="gameSection">
+      <h3>🎮 JavaScript Snake Game</h3>
+      <p>A fun, interactive browser-based Snake game built with pure JS.</p>
+      <button onclick="startGame()">Play Game</button>
+
+      <div id="gameContainer">
+        <div id="score">Score: 0</div>
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <p>Email: <strong>karannarang2004@gmail.com <br>
+      contact no. : 8607350774
+      </strong></p>
+      <p>Let’s collaborate and bring your ideas to life!</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Karan Narang — All Rights Reserved
+  </footer>
+
+  <script>
+    // Fade-in animations
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    }, { threshold: 0.2 });
+    sections.forEach(sec => observer.observe(sec));
+
+    // Snake Game setup
+    const canvas = document.getElementById("gameCanvas");
+    const ctx = canvas.getContext("2d");
+    const box = 15;
+    let snake, food, direction, score, game;
+    let gameActive = false;
+
+    function startGame() {
+      const gameContainer = document.getElementById("gameContainer");
+      gameContainer.style.display = "flex";
+      resetGame();
+      if (game) clearInterval(game);
+      game = setInterval(draw, 100);
+      gameActive = true;
+
+      // Scroll to the game section & lock scroll within it
+      document.getElementById("gameSection").scrollIntoView({ behavior: "smooth" });
+      disableScrollWithinSection();
+    }
+
+    function disableScrollWithinSection() {
+      const gameSection = document.getElementById("gameSection");
+      let scrollTop = window.scrollY;
+      function lockScroll() {
+        if (gameActive) window.scrollTo(0, scrollTop);
+      }
+      window.addEventListener("scroll", lockScroll);
+      // Save cleanup function for endGame
+      gameSection.lockScroll = lockScroll;
+    }
+
+    function endGame() {
+      const gameSection = document.getElementById("gameSection");
+      window.removeEventListener("scroll", gameSection.lockScroll);
+      clearInterval(game);
+      gameActive = false;
+    }
+
+    function resetGame() {
+      snake = [{ x: 9 * box, y: 9 * box }];
+      food = {
+        x: Math.floor(Math.random() * 19) * box,
+        y: Math.floor(Math.random() * 19) * box,
+      };
+      direction = null;
+      score = 0;
+      updateScore();
+    }
+
+    document.addEventListener("keydown", e => {
+      if (e.key === "ArrowLeft" && direction !== "RIGHT") direction = "LEFT";
+      else if (e.key === "ArrowUp" && direction !== "DOWN") direction = "UP";
+      else if (e.key === "ArrowRight" && direction !== "LEFT") direction = "RIGHT";
+      else if (e.key === "ArrowDown" && direction !== "UP") direction = "DOWN";
+      if (["ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].includes(e.key)) e.preventDefault();
+    });
+
+    function updateScore() {
+      document.getElementById("score").textContent = "Score: " + score;
+    }
+
+    function draw() {
+      ctx.fillStyle = "#000";
+      ctx.fillRect(0, 0, 300, 300);
+
+      for (let i = 0; i < snake.length; i++) {
+        ctx.fillStyle = i === 0 ? "#ffb400" : "#fff";
+        ctx.fillRect(snake[i].x, snake[i].y, box - 1, box - 1);
+      }
+
+      ctx.fillStyle = "#ff4444";
+      ctx.fillRect(food.x, food.y, box - 1, box - 1);
+
+      let headX = snake[0].x;
+      let headY = snake[0].y;
+
+      if (direction === "LEFT") headX -= box;
+      if (direction === "UP") headY -= box;
+      if (direction === "RIGHT") headX += box;
+      if (direction === "DOWN") headY += box;
+
+      if (headX === food.x && headY === food.y) {
+        score++;
+        updateScore();
+        food = {
+          x: Math.floor(Math.random() * 19) * box,
+          y: Math.floor(Math.random() * 19) * box,
+        };
+      } else {
+        snake.pop();
+      }
+
+      let newHead = { x: headX, y: headY };
+      if (headX < 0 || headY < 0 || headX >= 300 || headY >= 300 || collision(newHead, snake)) {
+        alert("Game Over! Your score: " + score);
+        endGame();
+      }
+
+      snake.unshift(newHead);
+    }
+
+    function collision(head, array) {
+      return array.some(seg => seg.x === head.x && seg.y === head.y);
+    }
+
+    // Mobile swipe controls
+    let touchStartX = 0, touchStartY = 0;
+    document.addEventListener("touchstart", e => {
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+    });
+    document.addEventListener("touchmove", e => {
+      if (!gameActive) return;
+      let dx = e.touches[0].clientX - touchStartX;
+      let dy = e.touches[0].clientY - touchStartY;
+      if (Math.abs(dx) > Math.abs(dy)) {
+        direction = dx > 0 && direction !== "LEFT" ? "RIGHT" : dx < 0 && direction !== "RIGHT" ? "LEFT" : direction;
+      } else {
+        direction = dy > 0 && direction !== "UP" ? "DOWN" : dy < 0 && direction !== "DOWN" ? "UP" : direction;
+      }
+      e.preventDefault();
+    });
+  </script>
+</body>
+</html>
